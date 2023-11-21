@@ -1,0 +1,37 @@
+<title>Feed back</title>
+<h1 style="background-color: lightpink; font-size: 30px; ">We are happy to receive your feedback, feel free to share your comments.</h1>
+<form action="index.html" id="ContactUs100" method="post" onsubmit="return ValidateForm(this);">
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
+if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
+return true; }
+</script>
+    <body style="background-color: lightgoldenrodyellow;"></body>
+<table style="width:100%;max-width:550px;border:0;" cellpadding="8" cellspacing="0">
+<tr> <td>
+    <h4 style="background-color: lightgoldenrodyellow; font-size: 20px; ">* Name</h4>
+</td> <td>
+<input name="Name" type="text" maxlength="60" style="width:100%;max-width:250px;" />
+</td> </tr> <tr> <td> <br>
+<h4 style="background-color: lightgoldenrodyellow; font-size: 20px; ">Phone number</h4>
+</td> <td>
+<input name="PhoneNumber" type="text" maxlength="43" style="width:100%;max-width:250px;" />
+</td> </tr> <tr> <td> <br>
+<h4 style="background-color: lightgoldenrodyellow; font-size: 20px; ">* Email address</h4>
+</td> <td>
+<input name="FromEmailAddress" type="text" maxlength="90" style="width:100%;max-width:250px;" />
+</td> </tr> <tr> <td> <br>
+<h4 style="background-color: lightgoldenrodyellow; font-size: 20px; ">* Your feedback</h4>
+</td> <td>
+<textarea name="Comments" rows="7" cols="40" style="width:100%;max-width:350px;"></textarea>
+</td> </tr> <tr> <td> <br> 
+<p style="font-size: 20px;"><b style="background-color: lightpink">Caution</b> *  required fields</p>
+</td> <td> <br> <br>
+<input name="skip_Submit" type="submit" value="Submit" />
+
+</td> </tr>
+</table>
+</form>

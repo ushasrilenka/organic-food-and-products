@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="eatfresh.css"/>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <script>function stickyMenu(){
+    var sticky=document.getElementById('sticky');
+    if(window.pageYOffset > 220) {
+        sticky.classList.add('sticky');
+    }
+    else{
+        sticky.classList.remove('sticky');
+    }
+}
+    
+window.onscroll = function(){
+    stickyMenu();
+}
+    </script>
+    <style title="text/css">
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+h1{
+            width: 3%;
+            position: relative;
+            top: 10px;
+            left: 90%;
+            color: black;
+            cursor: pointer;
+            
+        }
+        h1:before{
+            content: attr(data-count);
+            position: absolute;
+            color: white;
+            right: 16px;
+            font-size: 15px;
+            text-align: center;
+            top: -12px;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            opacity: 0;
+            
+        }
+        h1.zero:before{
+            opacity: 1;
+            
+        }
+        section{
+            width: 90%;
+            height: 400px;
+            display: flex;
+            justify-content: space-around;
+            margin: 100px auto;
+            
+        }
+        section div{
+            width: 22%;
+            height: 93%;
+            background: #f5f5f5;
+            padding: 1%;
+            position: relative;
+            
+        }
+        img{
+            width: 300px;
+            height: 186px;
+            
+        }
+        p{
+            margin: 7px;
+        }
+        h20{
+            width: 50px;
+            padding: 5px;
+            margin: 10px;
+            font-size: 15px;
+            color:orangered;
+            
+        }
+        button{
+            padding: 5px;
+            background: #184d47;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            color: #fafafa;
+            cursor: pointer;
+        }
+        
+        section div span{
+            position: absolute;
+            top: 14px;
+            left: 13px;
+            width: 300px;
+            height: 186px;
+            display: none;
+        }
+        
+        section div span img{
+            width: 100%;
+            height: 100%;
+        }
+        section div:nth-child(1)>span.active{
+            animation: first 0.5s ease-in;
+            z-index: 2;
+            display: block;
+        }
+        section div:nth-child(2)>span.active{
+            animation: second 0.5s ease-in;
+            z-index: 2;
+            display: block;
+        }
+        section div:nth-child(3)>span.active{
+            animation: third 0.5s ease-in;
+            z-index: 2;
+            display: block;
+        }
+        section div:nth-child(4)>span.active{
+            animation: four 0.5s ease-in;
+            z-index: 2;
+            display: block;
+        }
+        @keyframes first{
+            to{
+                width: 30px;
+                height: 20px;
+                left: 1290px;
+                top: -70px;
+            }
+        }
+        @keyframes second{
+            to{
+                width: 30px;
+                height: 20px;
+                left: 948px;
+                top: -70px;
+            }
+        }
+        @keyframes third{
+            to{
+                width: 30px;
+                height: 20px;
+                left: 606px;
+                top: -70px;
+            }
+        }
+        @keyframes four{
+            to{
+                width: 30px;
+                height: 20px;
+                left: 265px;
+                top: -70px;
+            }
+        }
+        .select{
+            width: 50%;
+            height: 580px;
+            padding: 10%;
+            background: orange;
+            position: absolute;
+            top: -1000px;
+            left: 10%;
+            transition: 1s;
+            overflow-y: auto;
+            margin: auto;
+            
+        }
+        .select.display{
+            top: 10px;
+        }
+        .select div{
+            width: 110%;
+            height: 140px;
+            display: flex;
+            padding: 7px;
+            border: 2px solid black;
+            position: relative;
+            margin: 50px auto;
+            
+        }
+        .select div img{
+            width: 150px;
+            height: 80%;
+            
+        }
+        .select p{
+            padding: 7px;
+            color: white;
+            
+        }
+        .select div h6,
+        .select div button{
+            position: absolute;
+            left: 45%;
+            top: 50%;
+            color: white;
+        }
+        .select div button{
+            left: 60%;
+            top: 55%;
+        }
+        .select div span{
+            display: none;
+            
+        }
+.clm{
+    
+    float: left;
+    width: 30%;
+    padding: 50px;
+    
+}
+
+.clm img{
+    height: 300px;
+    
+}     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+body{
+    margin:0;
+    font-family: system-ui;
+}       
+.parallax{
+    background-image: url(images/image1.png);
+    height: max-content;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-title{
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    color: white;
+    padding: 50px;
+    font-variant: small-caps;
+    font-size: 50px;
+    font-family: fantasy;
+    letter-spacing: 20px;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menu{
+    background: #184d47;
+    text-align: center;
+}
+
+.menu-ul{
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.menu-ul li{
+    font-size: 17px;
+    list-style: none;
+    display: inline-block;
+    padding: 25px 25px 26px 25px;
+}
+
+.a-menu{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-ul li:hover{
+    background: #5b8c5a;
+    transform: scale(1.1);
+}
+
+.container, .deals-container{
+    margin: 50px 50px 50px 5%;
+    width: 90%
+    text-align:center;
+}
+
+.categories, .items{
+    width: max-content;
+    margin: 25px;
+    border: 1px solid #184d47;
+    border-radius: 0 0 50px 50px;
+    display: inline-block;
+}
+
+.categories:hover, .items:hover{
+    box-shadow: 0 0 10px 3px #184d47;
+}
+
+.item-image{
+    height: 200px;
+    width:200px;
+    border-radius: 0 0 50px 50px;
+    padding: 10px;
+}
+
+.image-title{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+.title{
+    padding: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    color:white;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.deal{
+    padding: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    margin: 20px;
+    max-width: 20%;
+    background: linear-gradient(120deg, #16817a 20%, #cee397 50%, #16817a 80%);   
+}
+
+.coupon-btn{
+    border: 3px solid blue;
+    color: white;
+    margin:10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.coupon-btn:hover{
+    box-shadow: 0  0 10px 5px orange inset;
+    
+}
+
+.images{
+    display: inline-block;
+}
+
+.item-image-size{
+    height: 200px;
+    width: 300px;
+    padding: 5px;
+}
+
+.description{
+    margin:20px;
+    min-height: 100px;
+}
+
+.item-select{
+    margin: 10px 0 0 0;
+    width: 100px;
+    height: 30px;
+}
+
+.buynow-btn{
+    border: 1px solid #184d47;
+    background: #184d47;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color:white;
+}
+
+.buynow-btn:hover{
+    border: 1px solid #5b8c5a;
+    box-shadow: 0 0 10px 5px #5b8c5a inset;
+}
+</style>
+    
+    
+    </head>
+    <body>
+        <div class="parallax">
+        <div class = "page-title">Organic Food And Products</div>
+    </div>
+        
+        <h1><i class="fa fa-shopping-cart"></i></h1>
+        
+    <div class="menu" >
+        <ul class="menu-ul">
+        <a href="eatfresh.html" class="a-menu"><li>Home</li></a>
+        <a href="purchase.html" class="a-menu"><li>Previous Purchases</li></a>
+        <a href="track.html" class="a-menu"><li>Track My Orders</li></a>
+        <a href="contact.html" class="a-menu"><li>Feedback</li></a>
+        <a href="about%20us.html" class="a-menu"><li>About Us</li></a>
+        <a href="login1.html" class="a-menu"><li>Sign Out</li></a>
+        </ul>
+    </div>
+  
+        <h6 style="background-color: lightgreen; text-align: center; font-size: 20px; ">Press " Ctrl + f " to search a product</h6><br>
+        <h7 style="background-color: white; font-size: 40px; "><b>Products available for you</b></h7>
+
+<!--home-->
+    <div class="container">
+        <div class="categories">
+            <img src="vegetables/beens.jpg" class="item-image"/>
+            <div class="image-title">Vegetables</div>
+            </div>
+        <div class="categories">
+            <img src="fruits/apple.jpg" class="item-image"/>
+            <div class="image-title">Fruits</div>
+            </div>
+        <div class="categories">
+            <img src="meat/chicken.jpg" class="item-image"/>
+            <div class="image-title">Meat and Dairy</div>
+            </div>
+        <div class="categories">
+            <img src="other/mat.jpg" class="item-image"/>
+            <div class="image-title">Other products</div>
+            </div>
+    </div>
+<!--end home-->
+
+<!--deals-->
+    <div class="deals-container" id="deals">
+    <div class="parallax">
+        <div class="title">DEALS</div>
+        </div>
+        <div class="deal">
+            Save 10% on min-purchase of Rs.500 vegetables<br/>
+            <button class="coupon-btn">Add Coupon</button>
+        </div>
+        <div class="deal">
+            Save 15% on min-purchase of Rs.1000 fruits<br/>
+            <button class="coupon-btn">Add Coupon</button>
+        </div>
+        <div class="deal">
+            Save 8% on min-purchase of Rs.800 Meat<br/>
+            <button class="coupon-btn">Add Coupon</button>
+        </div>
+    </div>
+<!--end deals-->
+        
+<!--veg title-->
+    <div class="deals-container" id="deals">
+    <div class="parallax">
+        <div class="title">VEGETABLES</div>
+        </div>
+        
+    </div>
+<!--end veg title-->
+        
+<!--vegetables-->        
+        
+        <div class="deals-container" id="deals">
+        <div class="container">
+        <section>
+            <div class="items">
+                <img src="vegetables/beens.jpg" />
+                <p><b>Organic Beens</b></p>
+                <p><b>Price: </b>Rs.10 per 100grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                <option>0</option>
+                <option> 100 grams</option>
+                <option> 500 grams</option>
+                <option> 750 grams</option>
+                <option> 1000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="vegetables/beets.jpg"/>
+                <p><b>Organic Beets</b></p>
+                <p><b>Price: </b>Rs.5 per 100grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 100 grams</option>
+                <option> 500 grams</option>
+                <option> 750 grams</option>
+                <option> 1000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="vegetables/brinjal.jpg"/>
+                <p><b>Organic Brinjal</b></p>
+                <p><b>Price: </b>Rs.10 per 200grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 200 grams</option>
+                <option> 500 grams</option>
+                <option> 750 grams</option>
+                <option> 1000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            <p><b style="font-size: 50px; color: black;">Your Cart Items</b></p><br>
+            <p><b style="font-size: 20px; color: black;">Please select quantity and pay amount</b></p><br>
+            <img src="money/money.jpg" width="150px" height="150px">
+            <a href="amount.html" ><li><b>Check amount and pay</b></li></a>
+        </div>
+            
+            
+            <section>
+            <div class="items">
+                <img src="vegetables/cabbage.jpg"/>
+                <p><b>Organic Cabbage</b></p>
+                <p><b>Price: </b>Rs.30 per piece</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 1</option>
+                <option> 5</option>
+                <option> 7</option>
+                <option> 10</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="vegetables/carrot.jpg"/>
+                <p><b>Organic Carrot</b></p>
+                <p><b>Price: </b>Rs.10 per 100grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 100 grams</option>
+                <option> 500 grams</option>
+                <option> 750 grams</option>
+                <option> 1000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="vegetables/coriander.jpg"/>
+                <p><b>Organic Coriander</b></p>
+                <p><b>Price: </b>Rs.7 per single bunch</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 3</option>
+                <option> 5</option>
+                <option> 8</option>
+                <option> 10</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+            
+            <section>
+            <div class="items">
+                <img src="vegetables/green%20capsicum.jpg"/>
+                <p><b>Organic Green Capsicum</b></p>
+                <p><b>Price: </b>Rs.8 per 100grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 100 grams</option>
+                <option> 500 grams</option>
+                <option> 750 grams</option>
+                <option> 1000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="vegetables/mint.jpg"/>
+                <p><b>Organic Mint</b></p>
+                <p><b>Price: </b>Rs.10 per single bunch</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 2</option>
+                <option> 5</option>
+                <option> 7</option>
+                <option> 10</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="vegetables/mushrooms.jpg"/>
+                <p><b>Organic Mushrooms</b></p>
+                <p><b>Price: </b>Rs.30 per 100grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 100 grams</option>
+                <option> 500 grams</option>
+                <option> 700 grams</option>
+                <option> 1000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+            
+            <section>
+            <div class="items">
+                <img src="vegetables/onions.jpeg"/>
+                <p><b>Organic Onions</b></p>
+                <p><b>Price: </b>Rs.30 per kilo</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 1 kilo</option>
+                <option> 3 kilo</option>
+                <option> 5 kilo</option>
+                <option> 10 kilo</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="vegetables/potato.jpg"/>
+                <p><b>Organic Potato</b></p>
+                <p><b>Price: </b>Rs.15 per 500grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 500 grams</option>
+                <option> 1000 grams</option>
+                <option> 2000 grams</option>
+                <option> 3000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="vegetables/pumpkin.jpg"/>
+                <p><b>Organic Pumpkin</b></p>
+                <p><b>Price: </b>Rs.40 per 1 kilo</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 1 kilo</option>
+                <option> 2 kilo</option>
+                <option> 3 kilo</option>
+                <option> 5 kilo</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+            
+            <section>
+            <div class="items">
+                <img src="vegetables/raddish.jpg"/>
+                <p><b>Organic Raddish</b></p>
+                <p><b>Price: </b>Rs.20 per 500grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 500 grams</option>
+                <option> 1000 grams</option>
+                <option> 2000 grams</option>
+                <option> 3000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="vegetables/spinach.jpg"/>
+                <p><b>Organic Spinach</b></p>
+                <p><b>Price: </b>Rs.10 per single bunch</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 3</option>
+                <option> 5</option>
+                <option> 10</option>
+                <option> 15</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="vegetables/tomatoes.jpg"/>
+                <p><b>Organic Tamatoes</b></p>
+                <p><b>Price: </b>Rs.15 per 500grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 500 grams</option>
+                <option> 750 grams</option>
+                <option> 1000 grams</option>
+                <option> 2000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+        
+        
+            
+        </div>
+</div>
+<!--end of vegetables-->
+
+ <!--fruit title-->
+    <div class="deals-container" id="deals">
+    <div class="parallax">
+        <div class="title">FRUITS</div>
+        </div>
+        
+    </div>
+<!--end fruit title-->       
+        
+        
+<!--Fruits-->
+        <div class="deals-container" id="deals">
+        <div class="container">
+        <section>
+            <div class="items">
+                <img src="fruits/apple.jpg"/>
+                <p><b>Organic Apple</b></p>
+                <p><b>Price: </b>Rs.150 per 500grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 500 grams</option>
+                <option> 1000 grams</option>
+                <option> 2000 grams</option>
+                <option> 3000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="fruits/banana.jpg"/>
+                <p><b>Organic Bananas</b></p>
+                <p><b>Price: </b>Rs.60 per 12grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 12</option>
+                <option> 24</option>
+                <option> 36</option>
+                <option> 48</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="fruits/green%20grapes.png"/>
+                <p><b>Organic Green Grapes</b></p>
+                <p><b>Price: </b>Rs.40 per 500grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 500 grams</option>
+                <option> 1000 grams</option>
+                <option> 1500 grams</option>
+                <option> 2000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+            
+            
+            <section>
+            <div class="items">
+                <img src="fruits/kiwi.jpg"/>
+                <p><b>Organic Kiwi</b></p>
+                <p><b>Price: </b>Rs.20 per piece</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 4</option>
+                <option> 10</option>
+                <option> 15</option>
+                <option> 30</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="fruits/mango.jpg"/>
+                <p><b>Organic Mango</b></p>
+                <p><b>Price: </b>Rs.200 per 12 pieces</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 12</option>
+                <option> 24</option>
+                <option> 36</option>
+                <option> 42</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="fruits/orange.jpg"/>
+                <p><b>Organic Orange</b></p>
+                <p><b>Price: </b>Rs.200 per 10 pieces</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 10</option>
+                <option> 15</option>
+                <option> 20</option>
+                <option> 30</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+            
+            <section>
+            <div class="items">
+                <img src="fruits/papaya.png"/>
+                <p><b>Organic Papaya</b></p>
+                <p><b>Price: </b>Rs.30 per 1 kilo</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 1</option>
+                <option> 3</option>
+                <option> 5</option>
+                <option> 7</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="fruits/pineapple.jpg"/>
+                <p><b>Organic Pineapple</b></p>
+                <p><b>Price: </b>Rs.25 per 500 grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 500 grams</option>
+                <option> 1000 grams</option>
+                <option> 2000 grams</option>
+                <option> 3000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="fruits/sapota.jpg"/>
+                <p><b>Organic Sapota</b></p>
+                <p><b>Price: </b>Rs.40 per 10 pieces</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 10</option>
+                <option> 20</option>
+                <option> 50</option>
+                <option> 70</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+            
+            <section>
+            <div class="items">
+                <img src="fruits/watermelon.jpg"/>
+                <p><b>Organic Watermelon</b></p>
+                <p><b>Price: </b>Rs.80 per kilo</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 1 kilo</option>
+                <option> 3 kilo</option>
+                <option> 5 kilo</option>
+                <option> 10 kilo</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            
+
+        </section>
+        <div class="select">
+            
+        </div>
+            
+            
+        
+        
+            
+        </div>
+</div>
+<!--end of fruits-->
+        
+        
+        
+<!--meat title-->
+    <div class="deals-container" id="deals">
+    <div class="parallax">
+        <div class="title">Meat and Diary Products</div>
+        </div>
+        
+    </div>
+<!--end meat title-->       
+        
+        
+<!--meat-->
+        <div class="deals-container" id="deals">
+        <div class="container">
+        <section>
+            <div class="items">
+                <img src="meat/chicken.jpg"/>
+                <p><b>Chicken</b></p>
+                <p><b>Price: </b>Rs.90 per 500grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 500 grams</option>
+                <option> 1000 grams</option>
+                <option> 2000 grams</option>
+                <option> 3000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="meat/mutton.jpg"/>
+                <p><b>Mutton</b></p>
+                <p><b>Price: </b>Rs.350 per 500grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 500 grams</option>
+                <option> 1000 grams</option>
+                <option> 2000 grams</option>
+                <option> 3000 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="meat/black.jpg"/>
+                <p><b>Black pomfret</b></p>
+                <p><b>Price: </b>Rs.350 per kilo</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 1 kilo</option>
+                <option> 2 kilo</option>
+                <option> 3 kilo</option>
+                <option> 4 kilo</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+            
+            
+            <section>
+            <div class="items">
+                <img src="meat/brown.jpg"/>
+                <p><b>Organic Brown Eggs</b></p>
+                <p><b>Price: </b>Rs.80 per 12 pieces</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 12</option>
+                <option> 24</option>
+                <option> 36</option>
+                <option> 48</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="meat/cow.jpg"/>
+                <p><b>Organic Cow Milk</b></p>
+                <p><b>Price: </b>Rs.80 per 1 liter</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 1</option>
+                <option> 2</option>
+                <option> 4</option>
+                <option> 6</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="meat/river.jpg"/>
+                <p><b>Organic River Prawns</b></p>
+                <p><b>Price: </b>Rs.600 per kilo</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 1 kilo</option>
+                <option> 2 kilo</option>
+                <option> 4 kilo</option>
+                <option> 6 kilo</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+
+            
+            
+            
+<!--other title-->
+    <div class="deals-container" id="fruits">
+    <div class="parallax">
+        <div class="title">Other Products</div>
+        </div>
+        
+    </div>
+<!--other title-->       
+        
+        
+<!--other-->
+        <div class="deals-container" id="deals">
+        <div class="container">
+        <section>
+            <div class="items">
+                <img src="other/handkey.jpg"/>
+                <p><b>Cotton Handkey</b></p>
+                <p><b>Price: </b>Rs.300 per 6 pieces</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 6</option>
+                <option> 12</option>
+                <option> 18</option>
+                <option> 24</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+            <div class="items">
+                <img src="other/mat.jpg"/>
+                <p><b>Jute Mat</b></p>
+                <p><b>Price: </b>Rs.200 per 1 piece</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 1</option>
+                <option> 3</option>
+                <option> 5</option>
+                <option> 8</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+        
+        <div class="items">
+                <img src="other/soap.jpg"/>
+                <p><b>Organic Coffee Soap</b></p>
+                <p><b>Price: </b>Rs.40 per 50 grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 50 grams</option>
+                <option> 150 grams</option>
+                <option> 250 grams</option>
+                <option> 500 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+
+        </section>
+        <div class="select">
+            
+        </div>
+            
+            
+            <section>
+            <div class="items">
+                <img src="other/shampoo.jpg"/>
+                <p><b>Organic Shampoo Bar</b></p>
+                <p><b>Price: </b>Rs.30 per 100 grams</p><br>
+                <p><label><b>Quantity: </b></label></p>
+                <select class="item-select">
+                    <option>0</option>
+                <option> 100 grams</option>
+                <option> 200 grams</option>
+                <option> 500 grams</option>
+                <option> 750 grams</option>
+                </select>
+                <span></span>
+                <button>Add to cart</button>
+            </div>
+            
+
+        </section>
+        <div class="select">
+            
+        </div>
+      
+              
+
+            
+</body>
+</html>
+            
+
+
+
+<script type="text/javascript">
+    var noti = document.querySelector('h1');
+    var select = document.querySelector('.select');
+    var button = document.getElementsByTagName('button');
+    for(but of button)
+        {
+            but.addEventListener('click', (e)=>{
+                var add = Number(noti.getAttribute('data-count')|| 0);
+                noti.setAttribute('data-count', add + 1);
+                noti.classList.add('zero');
+                
+                
+                //copy and paste element//
+                var parent = e.target.parentNode;
+                var clone = parent.cloneNode(true);
+                select.appendChild(clone);
+                clone.lastElementChild.innerText = "";
+                if (clone){
+                    noti.onclick =()=>{
+                        select.classList.toggle('display');
+                    }
+                }
+                
+                // image animation to cart///
+                var image = e.target.parentNode.querySelector('img');
+                var span = e.target.parentNode.querySelector('span');
+                var s_image = image.cloneNode(false);
+                span.appendChild(s_image);
+                span.classList.add('active');
+                setTimeout(()=>{
+                    span.removeChild(s_image);
+                    span.classList.remove('active');
+                }, 500);
+                
+                //button//
+                
+                
+                
+                //button end//
+            })
+        }
+
+</script>

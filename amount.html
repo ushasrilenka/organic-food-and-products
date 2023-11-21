@@ -1,0 +1,45 @@
+<html>
+
+
+<body>
+    <p><b>Total amount</b></p><br>
+    <p>Your total amount after including your coupons,other timely delivary charges, GST and other taxes is as follow</p>
+    <p><b>Rs.</b></p>
+    
+    <p id="number"></p>
+    
+    <button id="b" onclick="random();"> Get Amount</button><br><br><br>
+    <a href="payment.html"><button>Pay Amount</button></a>
+</body>
+
+<script>
+    
+    
+
+function random(){
+
+document.getElementById("number").innerHTML = Math.floor(Math.random() * 600);
+    
+
+}   
+    
+    
+    
+    
+</script>
+    <style>
+    
+        #number{
+            font-size: 30px;
+            
+        }
+        
+        #b{
+            width:90;
+            height: 55px;
+        }
+    
+    </style>
+    
+    
+</html>
